@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<script>
+function myFunction() {
+    var embark = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < embark.length; i++) {
+        if (embark[i].checked) {
+            txt = txt + embark[i].value + "\n";
+        }
+    }
+    document.getElementById("features").value = "I am looking for an embark with the following features: \n" + txt;
+    document.getElementById("features").select();
+}
+</script>
+<body>
+<u>Desired Embark Features</u><br>
+<i>If you don't select a feature, it's presumed you don't want it or don't care if it's present or not.</i><br>
+<form method="get" onsubmit="return myFunction()">
+<DL>
+<DT>World size:</DT>
+<DD><input type="checkbox" name="embark" value="world size: 17x17">17x17 (fastest)</DD>
+<DD><input type="checkbox" name="embark" value="world size: 33x33">33x33</DD>
+<DD><input type="checkbox" name="embark" value="world size: 65x65">65x65</DD>
+<DD><input type="checkbox" name="embark" value="world size: 129x129">129x129</DD>
+<DD><input type="checkbox" name="embark" value="world size: 257x257">257x257 (slowest)</DD>
+<DT>Embark size:</DT>
+<DD><input type="checkbox" name="embark" value="embark size: 1x2">1x2 (very tiny, fastest)</DD>
+<DD><input type="checkbox" name="embark" value="embark size: 2x2">2x2</DD>
+<DD><input type="checkbox" name="embark" value="embark size: 3x2">3x2</DD>
+<DD><input type="checkbox" name="embark" value="embark size: 3x3">3x3</DD>
+<DD><input type="checkbox" name="embark" value="embark size: 4x2">4x2</DD>
+<DD><input type="checkbox" name="embark" value="embark size: 4x4">4x4</DD>
+<DD><input type="checkbox" name="embark" value="embark size: 5x5">5x5 (big, slowest)</DD>
+<DT>Elevation:</DT>
+<DD><input type="checkbox" name="embark" value="100% flat">100% completely flat</DD>
+<DD><input type="checkbox" name="embark" value="75%+ flat">75%+ (mostly) flat</DD>
+<DT>Savagery:</DT>
+<DD><input type="checkbox" name="embark" value="savagery: calm">Calm</DD>
+<DD><input type="checkbox" name="embark" value="savagery: wilderness">Wilderness</DD>
+<DD><input type="checkbox" name="embark" value="savagery: untamed wilds">Untamed Wilds</DD>
+<DT>Surface Trees:</DT>
+<DD><input type="checkbox" name="embark" value="no surface trees">No surface Trees (zero rain)</DD>
+<DD><input type="checkbox" name="embark" value="some surface trees">Some surface trees. (1+ rain)</DD>
+<DD><input type="checkbox" name="embark" value="max surface trees">All trees, all the time.  I am an elf. (50+ rain)</DD>
+<DT>Fresh Water:</DT>
+<DD><input type="checkbox" name="embark" value="a brook or river of some kind">Surface flowing water</DD>
+<DD><input type="checkbox" name="embark" value="a complete light aquifer">100% Light Aquifer</DD>
+<DD><input type="checkbox" name="embark" value="a complete heavy aquifer">100% Heavy Aquifer</DD>
+<DD><input type="checkbox" name="embark" value="a partial aquifer">Partial Aquifer</DD>
+<DD><input type="checkbox" name="embark" value="a partial light aquifer">Partial Light Aquifer</DD>
+<DD><input type="checkbox" name="embark" value="a partial heavy aquifer">Partial Heavy Aquifer</DD>
+<DD><input type="checkbox" name="embark" value="water in the caverns">Cavern Water</DD>
+<DD><input type="checkbox" name="embark" value="NO AQUIFER">NO AQUIFER</DD>
+<DD><input type="checkbox" name="embark" value="no water source of any kind">No water source of any kind.</DD>
+<DT>River size:</DT>
+<DD><input type="checkbox" name="embark" value="brook">Don't need a bridge to cross (brook)</DD>
+<DD><input type="checkbox" name="embark" value="stream or river">Need a bridge to cross (stream, river)</DD>
+<DD><input type="checkbox" name="embark" value="major river+">Must be a major river, the larger the better.</DD>
+<DT>Temperature:</DT>
+<DD><input type="checkbox" name="embark" value="biome temperature: killing cold">Cold Damage/frostbite to everything/everyone</DD>
+<DD><input type="checkbox" name="embark" value="biome temperature: freezing">Water freezes all year, on the surface</DD>
+<DD><input type="checkbox" name="embark" value="biome temperature: temperate">Less than four seasons of frozen surface water.</DD>
+<DD><input type="checkbox" name="embark" value="biome temperature: warm">Water never freezes on the surface</DD>
+<DD><input type="checkbox" name="embark" value="biome temperature: hot/scorching">Hot, but not deadly</DD>
+<DD><input type="checkbox" name="embark" value="biome temperature: very very hot">Fat Melting</DD>
+<DD><input type="checkbox" name="embark" value="biome temperature: scorching death">River Vaporizing</DD>
+<DT>Resources:</DT>
+<DD><input type="checkbox" name="embark" value="sand">sand</DD>
+<DD><input type="checkbox" name="embark" value="clay">clay</DD>
+<DD><input type="checkbox" name="embark" value="flux">flux</DD>
+<DD><input type="checkbox" name="embark" value="iron ore">iron bearing ore</DD>
+<DD><input type="checkbox" name="embark" value="metal ore">any metal bearing ore</DD>
+<DD><input type="checkbox" name="embark" value="lignite/coal">lignite and/or coal</DD>
+<DD><input type="checkbox" name="embark" value="gold ore">gold ore</DD>
+<DD><input type="checkbox" name="embark" value="candy">candy</DD>
+<DD><input type="checkbox" name="embark" value="no metal ore">No metal bearing ore of any kind</DD>
+<DT>Dwarven Civ at embark:</DT>
+<DD><input type="checkbox" name="embark" value="dead dwarven civ">Dead Dwarven Civ</DD>
+<DD><input type="checkbox" name="embark" value="dying dwarven civ">Dying Dwarven Civ</DD>
+<DD><input type="checkbox" name="embark" value="living dwarven civ">Living Dwarven Civ</DD>
+<DD><input type="checkbox" name="embark" value="multiple dwarven civs">Thriving/Multiple Dwarven Civs</DD>
+<DT>Other races as neighbors at embark:</DT>
+<DD><input type="checkbox" name="embark" value="neighbor: goblins">Goblins</DD>
+<DD><input type="checkbox" name="embark" value="neighbor: humans">Humans</DD>
+<DD><input type="checkbox" name="embark" value="neighbor: elves">Elves</DD>
+<DD><input type="checkbox" name="embark" value="neighbor: a tower">Tower (Necromancer)</DD>
+<DD><input type="checkbox" name="embark" value="neighbors: many towers">Many Towers (Necromancers)</DD>
+<DT>Optional Invaders:</DT>
+<DD><input type="checkbox" name="embark" value="semi-megabeasts">Semi Megabeasts (ettin, giants, minotaurs, cyclops)</DD>
+<DD><input type="checkbox" name="embark" value="megabeasts">Megabeasts (dragons, rocs, hydra, bronze colossus)</DD>
+<DD><input type="checkbox" name="embark" value="titans">Titans</DD>
+<DT>Years of history:</DT>
+<DD><input type="checkbox" name="embark" value="1 year of history">1 year of history</DD>
+<DD><input type="checkbox" name="embark" value="100 years of history">100 years of history</DD>
+<DD><input type="checkbox" name="embark" value="200 years of history">200 years of history</DD>
+<DD><input type="checkbox" name="embark" value="500 years of history">500 years of history</DD>
+<DD><input type="checkbox" name="embark" value="1000 years of history">1000 years of history</DD>
+<DT>Volcano options:</DT>
+<DD><input type="checkbox" name="embark" value="tall volcano">Volcano present and higher than embark level</DD>
+<DD><input type="checkbox" name="embark" value="flat volcano">Flat surface volcano (volcano present and at embark level)</DD>
+<DD><input type="checkbox" name="embark" value="any volcano">Volcano present, at any level or underground</DD>
+<DT>Cavern options:</DT>
+<DD><input type="checkbox" name="embark" value="dry caverns">Dry caverns (Bloodthorn cavern trees only)</DD>
+<DD><input type="checkbox" name="embark" value="nether cap in cavern(s)">Nether cap present</DD>
+<DD><input type="checkbox" name="embark" value="one cavern">one cavern</DD>
+<DD><input type="checkbox" name="embark" value="two caverns">two caverns</DD>
+<DD><input type="checkbox" name="embark" value="three caverns">three caverns</DD>
+<DT>Good/Evil:</DT>
+<DD><input type="checkbox" name="embark" value="biome alignment: some good">At least some Good</DD>
+<DD><input type="checkbox" name="embark" value="biome alignment: some evil">At least some Evil</DD>
+<DD><input type="checkbox" name="embark" value="biome alignment: 100% good">Pure 100% Good</DD>
+<DD><input type="checkbox" name="embark" value="biome alignment: 100% evil">Pure 100% Evil</DD>
+<DD><input type="checkbox" name="embark" value="biome alignment: some good, some evil">Mix of Good/Evil</DD>
+<DD><input type="checkbox" name="embark" value="biome alignment: neutral">No good & no evil. Just sweet, sweet neutral.</DD>
+<DT>Evil biome features:</DT>
+<DD><input type="checkbox" name="embark" value="reanimation">reanimation</DD>
+<DD><input type="checkbox" name="embark" value="undead flora & fauna">everything is undead/dead, even the trees and animals</DD>
+<DD><input type="checkbox" name="embark" value="unnatural rain">non-water rain (blood, mucus, etc)</DD>
+<DD><input type="checkbox" name="embark" value="evil clouds">evil clouds of doom</DD>
+</DL>
+<textarea name="textarea" rows="10" cols="50" id="features" >Embark features will go here..</textarea>
+<br><br>
+<input type="button" onclick="myFunction()" value="Parse Features">
+</form>
+</body>
+</html>
